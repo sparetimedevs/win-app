@@ -1,0 +1,209 @@
+/*
+ * Copyright (c) 2019 sparetimedevs and respective authors and developers.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    background: #353c43;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+}
+
+.header {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    padding-left: 16px;
+    padding-top: 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    color: #fff;
+    font-size: 24px;
+    background-color: #000000;
+    text-align: left;
+    z-index: 1;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.28);
+}
+
+.content {
+    margin: auto;
+    width: 80%;
+    padding-top: 60px;
+}
+
+.content-children > * {
+    display: inline-block;
+}
+
+.candidates-element {
+    background: #1A3C19;
+    border-radius: 2px;
+    display: inline-block;
+    height: 24px;
+    width: 100%;
+    margin: 0.25rem;
+    position: relative;
+    padding: 4px 10px 10px;
+}
+
+.candidates-element-shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.candidates-element-shadow:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.28);
+}
+
+.candidates-element-inner-left {
+    background-color: transparent;
+    display: inline-block;
+    width: 5%;
+    position: relative;
+}
+
+.candidates-element-inner-middle {
+    background-color: transparent;
+    display: inline-block;
+    width: 25%;
+    position: relative;
+}
+
+.candidates-element-inner-right {
+    background-color: transparent;
+    display: inline-block;
+    width: 50%;
+    position: relative;
+}
+
+.candidates-element-inner-right-right {
+    background-color: transparent;
+    display: inline-block;
+    width: 20%;
+    position: relative;
+}
+
+.text-index {
+    color: #fff;
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.text-name {
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+}
+
+.text-dates {
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.view-details {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75px;
+    min-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background: rgba(26, 60, 25, 0.74) radial-gradient(circle, transparent 1%, rgba(26, 60, 25, 0.74) 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: rgba(26, 60, 25, 0.74);
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.spinner {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    animation: rotate 2s linear infinite;
+    width: 66px;
+    height: 66px;
+    stroke-width: 5;
+}
+
+.spinner circle {
+    fill: none;
+    stroke: #fff;
+    animation: dash 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 2, 155;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 128, 24;
+        stroke-dashoffset: -20;
+    }
+    100% {
+        stroke-dasharray: 2, 155;
+        stroke-dashoffset: -155;
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
